@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table   //(name="Employees")
@@ -13,8 +15,11 @@ public class Employee {
 	@Id  // primary key
 	@GeneratedValue(strategy = GenerationType.AUTO)  
 	int id;
+	
+	@NotBlank(message = "Name is mandatory")
 	String name;
 	String dept;
+	@Max (value=10000)
 	float salary;
 
 	
