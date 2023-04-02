@@ -12,6 +12,11 @@ public class Tester {
 		};
 		
 		ji.area(10);
+		//java8Interface.doIt();
+//		java8Interface ji2= (n) -> {
+//			System.out.println(n*n);
+//		}
+		
 		
 		
 
